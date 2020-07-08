@@ -83,4 +83,4 @@ class Analyzer(object):
 
 if __name__ == "__main__":
     a = Analyzer()
-    print(a.analyze("Real_Estate_data.csv", "Cities.csv"))
+    print(a.analyzeUS("Real_Estate_data.csv"))
