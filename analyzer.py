@@ -59,6 +59,7 @@ class Analyzer(object):
                 if int(data[i-2]) > 2400:
                     break
                 city = data[i-1]
+                city += data[i+1]
                 record = True
             elif record:
                 try:
@@ -76,7 +77,7 @@ class Analyzer(object):
                     continue
 
         for k, v in sorted(res.items(), key=lambda item: item[1], reverse=True):
-            f.write(k + "," + str(v) + "\n")
+            f.write(k[:-2] + "," + k[-2:] + "," + str(v) + "\n")
 
         f.close()
 
